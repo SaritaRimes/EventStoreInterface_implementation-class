@@ -32,7 +32,7 @@ public class EventStoreImplementation implements EventStore{
             /* When eventString is equal to type, the object in i position is removed */
             if (Objects.equals(eventString, type)) {
                 eventsList.remove(i);
-                --i; /* elements of eventsList are relocated when one element is removed */
+                --i; /* necessary because elements of eventsList are relocated when one element is removed */
             }
         }
     }
